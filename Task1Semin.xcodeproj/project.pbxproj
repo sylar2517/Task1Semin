@@ -138,6 +138,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76258CD62367A48C007580AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76DCA5D6236740B3007C5F1A /* MainTableViewController.h */,
+				76DCA5D7236740B3007C5F1A /* MainTableViewController.m */,
+				76A69D302367713D001A3FEC /* InfoViewController.h */,
+				76A69D312367713D001A3FEC /* InfoViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		76C635D1236737570037AB55 = {
 			isa = PBXGroup;
 			children = (
@@ -163,15 +174,12 @@
 			children = (
 				76C63612236737D60037AB55 /* Models */,
 				76DCA5D323673F90007C5F1A /* Images */,
+				76258CD62367A48C007580AC /* Controllers */,
 				76C635DD236737570037AB55 /* AppDelegate.h */,
 				76C635DE236737570037AB55 /* AppDelegate.m */,
 				76C635E0236737570037AB55 /* SceneDelegate.h */,
 				76C635E1236737570037AB55 /* SceneDelegate.m */,
 				76C635E6236737570037AB55 /* Main.storyboard */,
-				76DCA5D6236740B3007C5F1A /* MainTableViewController.h */,
-				76DCA5D7236740B3007C5F1A /* MainTableViewController.m */,
-				76A69D302367713D001A3FEC /* InfoViewController.h */,
-				76A69D312367713D001A3FEC /* InfoViewController.m */,
 				76C635E9236737590037AB55 /* Assets.xcassets */,
 				76C635EB236737590037AB55 /* LaunchScreen.storyboard */,
 				76C635EE236737590037AB55 /* Info.plist */,
@@ -586,6 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Task1Semin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -603,6 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Task1Semin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
