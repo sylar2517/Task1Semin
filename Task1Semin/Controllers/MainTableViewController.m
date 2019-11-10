@@ -10,6 +10,7 @@
 
 #import "Goods.h"
 #import "Section.h"
+#import "GoodsProtocol.h"
 
 #import "EsotericsBook.h"
 #import "ProgrammingBook.h"
@@ -36,7 +37,9 @@ static NSInteger heigthAndWidthCellForDisk = 50;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self generatedBooksAndDisk];
+    
 }
 
 #pragma mark - Private Methods
@@ -165,6 +168,7 @@ static NSInteger heigthAndWidthCellForDisk = 50;
     
     return subcategory;
 }
+
 -(CGRect)createRectForCell:(Goods*)item{
     
     CGRect rect;
@@ -177,6 +181,7 @@ static NSInteger heigthAndWidthCellForDisk = 50;
     
     return rect;
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -201,16 +206,17 @@ static NSInteger heigthAndWidthCellForDisk = 50;
     Section* sect1 = [self.sectionsArray objectAtIndex:indexPath.section];
     Goods* item = [sect1.itemArray objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = item.name;
-    cell.detailTextLabel.text = [self cellSubcategory:item];
-    
-    
-    CGRect rect = [self createRectForCell:item];
-    UIGraphicsBeginImageContext(rect.size);
-    [item.image drawInRect:rect];
-    UIImage *endImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    cell.imageView.image = endImage;
+    if ([item conformsToProtocol:@protocol(GoodsProtocol)]) {
+       cell.textLabel.text = item.name;
+       cell.detailTextLabel.text = [self cellSubcategory:item];
+       
+       CGRect rect = [self createRectForCell:item];
+       UIGraphicsBeginImageContext(rect.size);
+       [item.image drawInRect:rect];
+       UIImage *endImage = UIGraphicsGetImageFromCurrentImageContext();
+       UIGraphicsEndImageContext();
+       cell.imageView.image = endImage;
+    }
     
     return cell;
 }
@@ -237,8 +243,6 @@ static NSInteger heigthAndWidthCellForDisk = 50;
     vc.selectedItem = item;
     
     [self.navigationController pushViewController:vc animated:YES];
-    
-    
 }
 
 @end

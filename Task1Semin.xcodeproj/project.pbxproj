@@ -80,6 +80,7 @@
 		76A69D2E23676ED5001A3FEC /* soft2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soft2.jpg; sourceTree = "<group>"; };
 		76A69D302367713D001A3FEC /* InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		76A69D312367713D001A3FEC /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		76C02EBF2378A2E3004140D2 /* GoodsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsProtocol.h; sourceTree = "<group>"; };
 		76C635DA236737570037AB55 /* Task1Semin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task1Semin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C635DD236737570037AB55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76C635DE236737570037AB55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,6 +150,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		76C02EC02378A5C8004140D2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				76C02EBF2378A2E3004140D2 /* GoodsProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		76C635D1236737570037AB55 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +181,7 @@
 		76C635DC236737570037AB55 /* Task1Semin */ = {
 			isa = PBXGroup;
 			children = (
+				76C02EC02378A5C8004140D2 /* Protocols */,
 				76C63612236737D60037AB55 /* Models */,
 				76DCA5D323673F90007C5F1A /* Images */,
 				76258CD62367A48C007580AC /* Controllers */,
@@ -594,7 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YXR875YW24;
 				INFOPLIST_FILE = Task1Semin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,7 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YXR875YW24;
 				INFOPLIST_FILE = Task1Semin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

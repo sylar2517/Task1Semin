@@ -61,9 +61,6 @@
     } else {
         [self.navigationController popToRootViewControllerAnimated:NO];
     }
-    
-    
-    
 }
 
 
